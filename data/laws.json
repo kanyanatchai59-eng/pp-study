@@ -1,0 +1,367 @@
+[
+ {
+  "no": 17,
+  "file": "data/law/l17.txt",
+  "short": "ป.อาญา",
+  "title": "ประมวลกฎหมายอาญา",
+  "group": "core",
+  "subjects": [
+   "อาญา"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/K2dTMURyaDllOXJVWVZqZGJLK09pdz09",
+  "latest": "[420] ราชกิจจานุเบกษา เล่ม ๑๔๒/ตอนที่ ๙๐ ก/หน้า ๗/๒๙ ธันวาคม ๒๕๖๘",
+  "warn": "",
+  "chars": 252509
+ },
+ {
+  "no": 18,
+  "file": "data/law/l18.txt",
+  "short": "ป.วิ.อาญา",
+  "title": "ประมวลกฎหมายวิธีพิจารณาความอาญา",
+  "group": "core",
+  "subjects": [
+   "วิ.อาญา"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/UVdzUTNzUFZlT3VBOEw2allVWTZxZz09",
+  "latest": "[222] ราชกิจจานุเบกษา เล่ม ๑๓๖/ตอนที่ ๓๔ ก/หน้า ๑๘/๒๐ มีนาคม ๒๕๖๒",
+  "warn": "",
+  "chars": 228270
+ },
+ {
+  "no": 19,
+  "file": "data/law/l19.txt",
+  "short": "ป.พ.พ.",
+  "title": "ประมวลกฎหมายแพ่งและพาณิชย์",
+  "group": "core",
+  "subjects": [
+   "แพ่งและพาณิชย์"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/Qko1NGNVa1FhMG9hTTNGcU9sTGxydz09",
+  "latest": "[328] ราชกิจจานุเบกษา เล่ม ๑๔๒/ตอนที่ ๑๔ ก/หน้า ๑/๒๔ มีนาคม ๒๕๖๘",
+  "warn": "",
+  "chars": 626501
+ },
+ {
+  "no": 20,
+  "file": "data/law/l20.txt",
+  "short": "พระธรรมนูญศาลยุติธรรม",
+  "title": "พระราชบัญญัติให้ใช้พระธรรมนูญศาลยุติธรรม พ.ศ. 2543",
+  "group": "core",
+  "subjects": [
+   "พระธรรมนูญและศาลแขวง"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/b2oxcEd6U0M2bzhQVktyQmFRaEVLdz09",
+  "latest": "[28] ราชกิจจานุเบกษา เล่ม ๑๓๖/ตอนที่ ๓๔ ก/หน้า ๑๑/๒๐ มีนาคม ๒๕๖๒",
+  "warn": "",
+  "chars": 32809
+ },
+ {
+  "no": 21,
+  "file": "data/law/l21.txt",
+  "short": "ป.วิ.แพ่ง",
+  "title": "ประมวลกฎหมายวิธีพิจารณาความแพ่ง",
+  "group": "core",
+  "subjects": [
+   "วิ.แพ่ง"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/VjZQcUR4VG1iVHZGS09TMUMvY2Vsdz09",
+  "latest": "[408] ราชกิจจานุเบกษา เล่ม ๑๔๒/ตอนที่ ๕๗ ก/หน้า ๕/๙ กันยายน ๒๕๖๘",
+  "warn": "",
+  "chars": 428766
+ },
+ {
+  "no": 22,
+  "file": "data/law/l22.txt",
+  "short": "พ.ร.บ.ศาลแขวงฯ",
+  "title": "พระราชบัญญัติจัดตั้งศาลแขวงและวิธีพิจารณาความอาญาในศาลแขวง พ.ศ. 2499",
+  "group": "core",
+  "subjects": [
+   "พระธรรมนูญและศาลแขวง"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/SUlSbFpqUG95RlJ6RDd2c3BKSXBWdz09",
+  "latest": "[33] ราชกิจจานุเบกษา เล่ม ๑๓๒/ตอนที่ ๘๖ ก/หน้า ๖๗/๘ กันยายน ๒๕๕๘",
+  "warn": "",
+  "chars": 23432
+ },
+ {
+  "no": 23,
+  "file": "data/law/l23.txt",
+  "short": "รัฐธรรมนูญ 2560",
+  "title": "รัฐธรรมนูญแห่งราชอาณาจักรไทย พุทธศักราช 2560",
+  "group": "core",
+  "subjects": [
+   "รัฐธรรมนูญ"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/VG9mbS9RRXZhdjNGYy9Xcm5LTjd1Zz09",
+  "latest": "[5] ราชกิจจานุเบกษา เล่ม ๑๓๘/ตอนที่ ๗๖ ก/หน้า ๑/๒๑ พฤศจิกายน ๒๕๖๔",
+  "warn": "",
+  "chars": 198177
+ },
+ {
+  "no": 29,
+  "file": "data/law/l29.txt",
+  "short": "ศาลเยาวชนและครอบครัวฯ 2553",
+  "title": "พระราชบัญญัติศาลเยาวชนและครอบครัวและวิธีพิจารณาคดีเยาวชนและครอบครัว พ.ศ. 2553",
+  "group": "elective",
+  "subjects": [
+   "เยาวชนและครอบครัว"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/YzljWm1sRFkxMFIvcE1JZHJwMDQrQT09",
+  "latest": "[39] ราชกิจจานุเบกษา เล่ม ๑๓๙/ตอนที่ ๖๖ ก/หน้า ๒๒/๒๕ ตุลาคม ๒๕๖๕",
+  "warn": "",
+  "chars": 135085
+ },
+ {
+  "no": 30,
+  "file": "data/law/l30.txt",
+  "short": "ลิขสิทธิ์ 2537",
+  "title": "พระราชบัญญัติลิขสิทธิ์ พ.ศ. 2537",
+  "group": "elective",
+  "subjects": [
+   "ทรัพย์สินทางปัญญา"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/N0VyYmRYbnBmK3Nva0d2QUdFV1pXUT09",
+  "latest": "[49] ราชกิจจานุเบกษา เล่ม ๑๓๙/ตอนที่ ๑๓ ก/หน้า ๑/๒๔ กุมภาพันธ์ ๒๕๖๕",
+  "warn": "",
+  "chars": 65123
+ },
+ {
+  "no": 31,
+  "file": "data/law/l31.txt",
+  "short": "สิทธิบัตร 2522",
+  "title": "พระราชบัญญัติสิทธิบัตร พ.ศ. 2522",
+  "group": "elective",
+  "subjects": [
+   "ทรัพย์สินทางปัญญา"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/aDNDM1BPdWp3Zjl3cWUrQUdHYU9Odz09",
+  "latest": "[98] ราชกิจจานุเบกษา เล่ม ๑๓๖/ตอนพิเศษ ๒๕ ง/หน้า ๙๒/๒๘ มกราคม ๒๕๖๒",
+  "warn": "",
+  "chars": 72817
+ },
+ {
+  "no": 32,
+  "file": "data/law/l32.txt",
+  "short": "เครื่องหมายการค้า 2534",
+  "title": "พระราชบัญญัติเครื่องหมายการค้า พ.ศ. 2534",
+  "group": "elective",
+  "subjects": [
+   "ทรัพย์สินทางปัญญา"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/eWR3eGRHVEpDL2N4KzJOUUJGUkRSdz09",
+  "latest": "[85] ราชกิจจานุเบกษา เล่ม ๑๓๙/ตอนที่ ๖๖ ก/หน้า ๒๒/๒๕ ตุลาคม ๒๕๖๕",
+  "warn": "",
+  "chars": 87877
+ },
+ {
+  "no": 33,
+  "file": "data/law/l33.txt",
+  "short": "ศาลทรัพย์สินทางปัญญาฯ 2539",
+  "title": "พระราชบัญญัติจัดตั้งศาลทรัพย์สินทางปัญญาและการค้าระหว่างประเทศและวิธีพิจารณาคดีทรัพย์สินทางปัญญาและการค้าระหว่างประเทศ พ.ศ. 2539",
+  "group": "elective",
+  "subjects": [
+   "ทรัพย์สินทางปัญญา",
+   "การค้าระหว่างประเทศ"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/TDhIN0VFRVVmaXRjMnNLNXRReXFuQT09",
+  "latest": "[25] ราชกิจจานุเบกษา เล่ม ๑๓๙/ตอนที่ ๓๒ ก/หน้า ๑๐/๒๓ พฤษภาคม ๒๕๖๕",
+  "warn": "",
+  "chars": 28838
+ },
+ {
+  "no": 34,
+  "file": "data/law/l34.txt",
+  "short": "ประมวลรัษฎากร",
+  "title": "ประมวลรัษฎากร",
+  "group": "elective",
+  "subjects": [
+   "ภาษีอากร"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/UlRsZkRZZGI0RkVYeUh3ZEFyaS9tUT09",
+  "latest": "[630] ราชกิจจานุเบกษา เล่ม ๑๓๘/ตอนที่ ๗๓ ก/หน้า ๙๐/๘ พฤศจิกายน ๒๕๖๔",
+  "warn": "",
+  "chars": 440953
+ },
+ {
+  "no": 35,
+  "file": "data/law/l35.txt",
+  "short": "ศาลภาษีอากรฯ 2528",
+  "title": "พระราชบัญญัติจัดตั้งศาลภาษีอากรและวิธีพิจารณาคดีภาษีอากร พ.ศ. 2528",
+  "group": "elective",
+  "subjects": [
+   "ภาษีอากร"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/NlNTWTFmWWp0bHo1VlQyQzNJaVgwQT09",
+  "latest": "[25] ราชกิจจานุเบกษา เล่ม ๑๔๒/ตอนที่ ๓๕ ก/หน้า ๑/๒๗ พฤษภาคม ๒๕๖๘",
+  "warn": "",
+  "chars": 19234
+ },
+ {
+  "no": 36,
+  "file": "data/law/l36.txt",
+  "short": "คุ้มครองแรงงาน 2541",
+  "title": "พระราชบัญญัติคุ้มครองแรงงาน พ.ศ. 2541",
+  "group": "elective",
+  "subjects": [
+   "แรงงาน"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/ZGN3NXk0eENvNjBSdjRnT2NsdjFTQT09",
+  "latest": "[103] ราชกิจจานุเบกษา เล่ม ๑๔๒/ตอนที่ ๗๔ ก/หน้า ๔๑/๗ พฤศจิกายน ๒๕๖๘",
+  "warn": "",
+  "chars": 110261
+ },
+ {
+  "no": 37,
+  "file": "data/law/l37.txt",
+  "short": "แรงงานสัมพันธ์ 2518",
+  "title": "พระราชบัญญัติแรงงานสัมพันธ์ พ.ศ. 2518",
+  "group": "elective",
+  "subjects": [
+   "แรงงาน"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/RjlYQUc2ZGMyeHBKMmRhZjdjRS9wUT09",
+  "latest": "[17] ราชกิจจานุเบกษา เล่ม ๑๓๙/ตอนที่ ๖๖ ก/หน้า ๒๒/๒๕ ตุลาคม ๒๕๖๕",
+  "warn": "",
+  "chars": 76381
+ },
+ {
+  "no": 38,
+  "file": "data/law/l38.txt",
+  "short": "ศาลแรงงานฯ 2522",
+  "title": "พระราชบัญญัติจัดตั้งศาลแรงงานและวิธีพิจารณาคดีแรงงาน พ.ศ. 2522",
+  "group": "elective",
+  "subjects": [
+   "แรงงาน"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/Y1BPam1zSFpJeGZzSDVpbUQwVnJMdz09",
+  "latest": "[35] ราชกิจจานุเบกษา เล่ม ๑๓๙/ตอนที่ ๓๒ ก/หน้า ๗/๒๓ พฤษภาคม ๒๕๖๕",
+  "warn": "",
+  "chars": 37143
+ },
+ {
+  "no": 39,
+  "file": "data/law/l39.txt",
+  "short": "ล้มละลาย 2483",
+  "title": "พระราชบัญญัติล้มละลาย พุทธศักราช 2483",
+  "group": "elective",
+  "subjects": [
+   "ล้มละลาย"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/dWNDc0pxS3NteHBmaHJoTE9KakhKdz09",
+  "latest": "[227] ราชกิจจานุเบกษา เล่ม ๑๓๙/ตอนที่ ๖๖ ก/หน้า ๒๒/๒๕ ตุลาคม ๒๕๖๕",
+  "warn": "คำเตือน: ไฟล์นี้ยังไม่รวม พ.ร.บ.ล้มละลาย (ฉบับที่ 11) พ.ศ. 2569 (ราชกิจจาฯ 24 พ.ย. 2569) ให้อ่านคู่กับไฟล์ 47",
+  "chars": 205175
+ },
+ {
+  "no": 40,
+  "file": "data/law/l40.txt",
+  "short": "ศาลล้มละลายฯ 2542",
+  "title": "พระราชบัญญัติจัดตั้งศาลล้มละลายและวิธีพิจารณาคดีล้มละลาย พ.ศ. 2542",
+  "group": "elective",
+  "subjects": [
+   "ล้มละลาย"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/ZUdESnpldzl0Q0tvSDBJaVdTL2hiUT09",
+  "latest": "[24] ราชกิจจานุเบกษา เล่ม ๑๓๒/ตอนที่ ๑๒๐ ก/หน้า ๒๒/๑๔ ธันวาคม ๒๕๕๘",
+  "warn": "",
+  "chars": 22226
+ },
+ {
+  "no": 41,
+  "file": "data/law/l41.txt",
+  "short": "รับขนของทางทะเล 2534",
+  "title": "พระราชบัญญัติการรับขนของทางทะเล พ.ศ. 2534",
+  "group": "elective",
+  "subjects": [
+   "การค้าระหว่างประเทศ"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/TWlDeFRkSWdpTEJWMlQzVklLUktoQT09",
+  "latest": "[1] ราชกิจจานุเบกษา เล่ม ๑๐๘/ตอนที่ ๒๐๓/ฉบับพิเศษ หน้า ๖๘/๒๒ พฤศจิกายน ๒๕๓๔",
+  "warn": "",
+  "chars": 29780
+ },
+ {
+  "no": 42,
+  "file": "data/law/l42.txt",
+  "short": "ขนส่งต่อเนื่องหลายรูปแบบ 2548",
+  "title": "พระราชบัญญัติการขนส่งต่อเนื่องหลายรูปแบบ พ.ศ. 2548",
+  "group": "elective",
+  "subjects": [
+   "การค้าระหว่างประเทศ"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/M2UyTTM0bzJsTDhOR013cjlGSmJzdz09",
+  "latest": "[4] ราชกิจจานุเบกษา เล่ม ๑๓๙/ตอนที่ ๖๖ ก/หน้า ๒๒/๒๕ ตุลาคม ๒๕๖๕",
+  "warn": "",
+  "chars": 50146
+ },
+ {
+  "no": 43,
+  "file": "data/law/l43.txt",
+  "short": "อนุญาโตตุลาการ 2545",
+  "title": "พระราชบัญญัติอนุญาโตตุลาการ พ.ศ. 2545",
+  "group": "elective",
+  "subjects": [
+   "การค้าระหว่างประเทศ"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/WEw1TTJHd252V2djRU4zdXpkKzRGdz09",
+  "latest": "[9] ราชกิจจานุเบกษา เล่ม ๑๓๖/ตอนที่ ๔๙ ก/หน้า ๖๒/๑๔ เมษายน ๒๕๖๒",
+  "warn": "",
+  "chars": 35310
+ },
+ {
+  "no": 44,
+  "file": "data/law/l44.txt",
+  "short": "วิธีพิจารณาคดีผู้บริโภค 2551",
+  "title": "พระราชบัญญัติวิธีพิจารณาคดีผู้บริโภค พ.ศ. 2551",
+  "group": "elective",
+  "subjects": [
+   "วิธีพิจารณาคดีผู้บริโภค"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/YUpvUUJ0Njc3NkQvczdieno3M0c5UT09",
+  "latest": "[9] ราชกิจจานุเบกษา เล่ม ๑๓๒/ตอนที่ ๑๒๐ ก/หน้า ๓๗/๑๔ ธันวาคม ๒๕๕๘",
+  "warn": "",
+  "chars": 35596
+ },
+ {
+  "no": 45,
+  "file": "data/law/l45.txt",
+  "short": "ระเบียบข้าราชการฝ่ายตุลาการฯ 2543",
+  "title": "พระราชบัญญัติระเบียบข้าราชการฝ่ายตุลาการศาลยุติธรรม พ.ศ. 2543",
+  "group": "general",
+  "subjects": [
+   "ทั่วไป"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/ak5TNGJmSVN4elBsd2I2ZFJnVlZIdz09",
+  "latest": "[34] ราชกิจจานุเบกษา เล่ม ๑๓๙/ตอนที่ ๓๒ ก/หน้า ๑/๒๓ พฤษภาคม ๒๕๖๕",
+  "warn": "",
+  "chars": 76978
+ },
+ {
+  "no": 46,
+  "file": "data/law/l46.txt",
+  "short": "การปรับเป็นพินัย 2565",
+  "title": "พระราชบัญญัติว่าด้วยการปรับเป็นพินัย พ.ศ. 2565",
+  "group": "general",
+  "subjects": [
+   "ทั่วไป"
+  ],
+  "url": "https://searchlaw.ocs.go.th/council-of-state/#/public/doc/QVRpOU1vUDZuMnEwK3FNK052Kys0dz09",
+  "latest": "[1] ราชกิจจานุเบกษา เล่ม ๑๓๙/ตอนที่ ๖๖ ก/หน้า ๒๒/๒๕ ตุลาคม ๒๕๖๕",
+  "warn": "",
+  "chars": 40117
+ },
+ {
+  "no": 47,
+  "file": "data/law/l47.txt",
+  "short": "ล้มละลาย (ฉบับที่ 11) 2569",
+  "title": "พระราชบัญญัติล้มละลาย (ฉบับที่ 11) พ.ศ. 2569",
+  "group": "elective",
+  "subjects": [
+   "ล้มละลาย"
+  ],
+  "url": "",
+  "latest": "ราชกิจจานุเบกษา เล่ม ๑๔๓/ตอนที่ ๗๔ ก/๒๔ พฤศจิกายน ๒๕๖๙ (ข้อความถอดจาก PDF ราชกิจจาฯ)",
+  "warn": "แก้ไขเพิ่มเติม พ.ร.บ.ล้มละลาย พุทธศักราช 2483 (ไฟล์ 39)",
+  "chars": 47042
+ }
+]
