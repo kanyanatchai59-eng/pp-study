@@ -5,6 +5,8 @@ const KEY = 'ppstudy.v1';
 const SUBJECTS = ['อาญา', 'แพ่งและพาณิชย์', 'วิ.อาญา', 'วิ.แพ่ง', 'พยานหลักฐาน', 'พระธรรมนูญและศาลแขวง', 'รัฐธรรมนูญ', 'วิชาเลือก', 'ภาษาอังกฤษ'];
 const ELECTIVES = ['เยาวชนและครอบครัว', 'ทรัพย์สินทางปัญญา', 'ภาษีอากร', 'แรงงาน', 'ล้มละลาย', 'การค้าระหว่างประเทศ', 'วิธีพิจารณาคดีผู้บริโภค'];
 const COLS = [['todo', 'ต้องทำ'], ['doing', 'กำลังทำ'], ['review', 'ทบทวน'], ['done', 'เสร็จ']];
+const AI_ROOM = 'https://claude.ai/artifact/EfTiE8jyisgwrVkmB89Lj7';
+const REDUCE = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 const TARGET_MIN = 25; // ข้อสอบจริง 10 ข้อ 4 ชม. 10 นาที ≈ 25 นาทีต่อข้อ
 
 const $ = (s, el = document) => el.querySelector(s);
@@ -104,7 +106,7 @@ function checkAchievements() {
   let changed = false;
   for (const [id, e, name] of ACH) {
     const test = ACH.find(a => a[0] === id)[4];
-    if (!S.unlocked[id] && test()) { S.unlocked[id] = dayStr(); changed = true; toast(`${e} ปลดล็อกความสำเร็จ: ${name}`); }
+    if (!S.unlocked[id] && test()) { S.unlocked[id] = dayStr(); changed = true; toast(`${e} ปลดล็อกความสำเร็จ: ${name}`); confetti(); }
   }
   if (changed) localStorage.setItem(KEY, JSON.stringify(S));
 }
@@ -113,10 +115,49 @@ function checkAchievements() {
 let toastTimer;
 function toast(msg) {
   let t = $('.toast'); if (!t) { t = document.createElement('div'); t.className = 'toast'; document.body.appendChild(t); }
-  t.textContent = msg; t.style.display = 'block';
+  t.textContent = msg; t.style.display = 'block'; t.style.animation = 'none'; void t.offsetWidth; t.style.animation = '';
   clearTimeout(toastTimer); toastTimer = setTimeout(() => t.style.display = 'none', 2600);
 }
 function bar(p) { return `<div class="bar"><i style="width:${Math.max(0, Math.min(100, p))}%"></i></div>`; }
+/* ---------- motion helpers ---------- */
+function confetti() {
+  if (REDUCE || !document.body.animate) return;
+  const box = document.createElement('div'); box.className = 'confetti'; document.body.appendChild(box);
+  const cols = ['#7a1f2b', '#e9b949', '#1f7a4d', '#4f7cc9', '#e58a97'];
+  for (let i = 0; i < 36; i++) {
+    const p = document.createElement('i'); p.style.left = (10 + Math.random() * 80) + '%'; p.style.background = cols[i % cols.length]; box.appendChild(p);
+    const dx = (Math.random() - .5) * 240, dy = window.innerHeight * (.55 + Math.random() * .4), r = (Math.random() - .5) * 900;
+    p.animate([{ transform: 'translate(0,0) rotate(0)', opacity: 1 }, { transform: `translate(${dx}px,${dy}px) rotate(${r}deg)`, opacity: 0 }], { duration: 1400 + Math.random() * 700, easing: 'cubic-bezier(.2,.6,.4,1)', delay: Math.random() * 180, fill: 'forwards' });
+  }
+  setTimeout(() => box.remove(), 2600);
+}
+function countUp(root) {
+  $$('[data-n]', root).forEach(el => {
+    const to = +el.dataset.n, dec = +(el.dataset.d || 0);
+    if (REDUCE || !isFinite(to) || to === 0) { el.textContent = to.toFixed(dec); return; }
+    const t0 = performance.now(), dur = 800;
+    const f = now => { const p = Math.min(1, (now - t0) / dur), v = to * (1 - Math.pow(1 - p, 3)); el.textContent = v.toFixed(dec); if (p < 1) requestAnimationFrame(f); };
+    requestAnimationFrame(f);
+  });
+}
+function enter(el) {
+  el.classList.remove('page-in'); void el.offsetWidth; el.classList.add('page-in');
+  [...el.children].forEach((c, i) => { c.classList.remove('m-in'); c.style.setProperty('--i', Math.min(i, 10)); void c.offsetWidth; c.classList.add('m-in'); });
+  $$('.badges', el).forEach(b => [...b.children].forEach((c, i) => { c.style.setProperty('--i', Math.min(i, 14)); c.classList.add('m-in'); }));
+  countUp(el);
+}
+function moveInd() {
+  const nav = $('#tabs'), on = $('#tabs a.on'), ind = $('#tabs .ind');
+  if (!nav || !ind) return;
+  if (!on) { ind.style.opacity = 0; return; }
+  ind.style.opacity = 1; ind.style.width = on.offsetWidth + 'px'; ind.style.setProperty('--x', on.offsetLeft + 'px');
+}
+window.addEventListener('resize', moveInd);
+function openAI(q, answer) {
+  if (answer && answer.trim()) copyText(answer);
+  const url = AI_ROOM + (q && q.set !== 'ของฉัน' ? '#' + q.id : '');
+  const a = document.createElement('a'); a.href = url; a.target = '_blank'; a.rel = 'noopener'; document.body.appendChild(a); a.click(); a.remove();
+}
 function setTop(t) { $('#topinfo').textContent = t || ''; }
 async function copyText(t) {
   try { await navigator.clipboard.writeText(t); toast('คัดลอกแล้ว'); }
@@ -135,6 +176,7 @@ function route() {
   setTop('');
   window.scrollTo(0, 0);
   v($('#app'), rest.map(decodeURIComponent));
+  enter($('#app')); moveInd();
 }
 window.addEventListener('hashchange', route);
 
@@ -155,10 +197,17 @@ function viewHome(el) {
       : `<h2>เริ่มจากตั้งเป้าหมาย</h2><p class="small muted">ใส่วันสอบเป้าหมาย วิชาเลือก และเวลาเรียนต่อสัปดาห์ แล้วหน้านี้จะนับถอยหลังให้</p><a class="btn primary" href="#goals">ตั้งเป้าหมาย</a>`}
   </div>
   <div class="grid2" style="margin-bottom:12px">
-    <div class="stat"><b>🔥 ${streak()}</b><span>วันติดต่อกัน</span></div>
-    <div class="stat"><b>${(wkMin / 60).toFixed(1)}/${g.weeklyHours || 0}</b><span>ชั่วโมงสัปดาห์นี้</span></div>
-    <div class="stat"><b>${wkQ}/${g.weeklyQuestions || 0}</b><span>ข้อที่ตอบสัปดาห์นี้</span></div>
-    <div class="stat"><b>${due}</b><span>บทเรียนฎีกาที่ต้องทบทวน</span></div>
+    <div class="stat"><b>🔥 <span data-n="${streak()}">${streak()}</span></b><span>วันติดต่อกัน</span></div>
+    <div class="stat"><b><span data-n="${(wkMin / 60).toFixed(1)}" data-d="1">${(wkMin / 60).toFixed(1)}</span>/${g.weeklyHours || 0}</b><span>ชั่วโมงสัปดาห์นี้</span></div>
+    <div class="stat"><b><span data-n="${wkQ}">${wkQ}</span>/${g.weeklyQuestions || 0}</b><span>ข้อที่ตอบสัปดาห์นี้</span></div>
+    <div class="stat"><b><span data-n="${due}">${due}</span></b><span>บทเรียนฎีกาที่ต้องทบทวน</span></div>
+  </div>
+  <div class="card ai-card"><span class="scanline"></span>
+    <h2>✨ ห้องตรวจข้อสอบ AI</h2>
+    <p class="small" style="margin:0">ถ่ายรูปโจทย์กับสมุดคำตอบ AI อ่านลายมือให้ตรวจทาน แล้วตรวจทีละประเด็นตามหลักเกณฑ์ ก.ต. เปิดตัวบทจริงจากคลัง ยกฎีกาที่คล้ายกัน และเขียนคำตอบตัวอย่างให้</p>
+    <div class="ai-steps"><span>1 ถ่ายรูป</span><span>2 ตรวจทานที่ AI อ่าน</span><span>3 ผลตรวจ + คะแนน</span></div>
+    <a class="btn primary" href="${AI_ROOM}" target="_blank" rel="noopener">เปิดห้องตรวจ</a>
+    <p class="tiny muted" style="margin:8px 0 0">เปิดใน Claude ด้วยบัญชีของมิ้ม ใช้โควตาการใช้งาน Claude ของมิ้ม ประวัติการตรวจเก็บในบัญชี</p>
   </div>
   <div class="card">
     <h2>ทำต่อ</h2>
@@ -198,7 +247,7 @@ function viewExam(el, args) {
     <h2>ฝึกข้อสอบ</h2>
     <p class="small muted" style="margin:0">ข้อสอบจริงสนามใหญ่ปี 2562 ข้อเท็จจริงเล่าใหม่ให้กระชับแต่ครบประเด็น ต้นฉบับพร้อมธงคำตอบอยู่ที่ <a href="${esc(EXAM.url)}" target="_blank" rel="noopener">เว็บ ก.ต.</a> ตอบแล้วเทียบเฉลยทีละประเด็น</p>
     <div class="chips">${filters.map(f => `<span class="chip ${f === examFilter ? 'on' : ''}" data-f="${f}">${f}</span>`).join('')}</div>
-    <div class="row"><button class="primary" id="rand">🎲 สุ่มข้อที่ยังไม่ทำ</button><a class="btn" href="#exam/new">＋ เพิ่มข้อสอบของฉัน</a></div>
+    <div class="row"><button class="primary" id="rand">🎲 สุ่มข้อที่ยังไม่ทำ</button><a class="btn" href="#exam/new">＋ เพิ่มข้อสอบของฉัน</a><a class="btn" href="${AI_ROOM}" target="_blank" rel="noopener">✨ ถ่ายรูปข้อสอบให้ AI ตรวจ</a></div>
   </div>
   ${shown.map(q => { const b = bestScore(q.id); const n = S.attempts.filter(a => a.qid === q.id).length; return `
     <a class="list-item" href="#exam/${encodeURIComponent(q.id)}">
@@ -254,8 +303,8 @@ function viewQuestion(el, qid) {
     <textarea id="ans" placeholder="เขียนคำตอบที่นี่">${esc(S.drafts[qid] || '')}</textarea>
     <div class="row" style="margin-top:10px">
       <button class="primary" id="reveal">ดูเฉลยและตรวจเอง</button>
+      <button id="ai">✨ ให้ AI ตรวจข้อนี้</button>
       <button id="cp">📋 คัดลอกให้ Claude ตรวจ</button>
-      <a class="btn" href="https://claude.ai/projects" target="_blank" rel="noopener">เปิด Claude</a>
     </div>
   </div>
   <div id="key"></div>
@@ -270,6 +319,7 @@ function viewQuestion(el, qid) {
   $('#trs', el).onclick = () => { secs = 0; show(); };
   stopTimer = () => clearInterval(iv);
   $('#cp', el).onclick = () => copyText(claudePrompt(q, ans.value));
+  $('#ai', el).onclick = () => { if (!ans.value.trim()) { toast('เขียนคำตอบก่อน หรือถ่ายรูปสมุดคำตอบในห้องตรวจ'); } openAI(q, ans.value); if (ans.value.trim()) toast(q.set === 'ของฉัน' ? 'คัดลอกคำตอบแล้ว วางโจทย์และคำตอบในห้องตรวจ' : 'คัดลอกคำตอบแล้ว วางในช่องคำตอบของห้องตรวจ'); };
   $$('[data-del]', el).forEach(b => b.onclick = () => { if (!confirm('ลบประวัติการตอบรายการนี้?')) return; S.attempts = S.attempts.filter(a => a.id !== b.dataset.del); save(); viewQuestion(el, qid); });
   $('#reveal', el).onclick = () => {
     if (revealed) return; revealed = true;
@@ -284,14 +334,14 @@ function viewQuestion(el, qid) {
       <div class="row"><button class="primary" id="saveScore">บันทึกคะแนน</button><span class="small muted" id="sc"></span></div></div>`;
     const boxes = $$('input[type=checkbox]', k);
     const calc = () => Math.round(100 * boxes.filter(b => b.checked).length / (boxes.length || 1));
-    boxes.forEach(b => b.onchange = () => $('#sc', k).textContent = `${calc()}%`);
+    boxes.forEach(b => b.onchange = () => { const sc = $('#sc', k); sc.textContent = `${calc()}%`; sc.classList.remove('bump'); void sc.offsetWidth; sc.classList.add('bump'); if (calc() === 100) confetti(); });
     $('#saveScore', k).onclick = () => {
       S.attempts.push({ id: uid(), qid, date: dayStr(), ts: Date.now(), answer: ans.value, checks: boxes.map(b => b.checked), score: calc(), secs });
       if (secs >= 60) S.logs.push({ id: uid(), date: dayStr(), minutes: Math.round(secs / 60), topic: q.subject, note: `ทำข้อสอบ ${q.title}` });
       delete S.drafts[qid]; markActive(); save();
       toast(`บันทึกแล้ว ${calc()}%`); viewQuestion(el, qid);
     };
-    k.scrollIntoView({ behavior: 'smooth' });
+    enter(k); k.scrollIntoView({ behavior: REDUCE ? 'auto' : 'smooth' });
   };
 }
 
