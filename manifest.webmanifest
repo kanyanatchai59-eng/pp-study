@@ -1,8 +1,8 @@
 {
   "name": "PP Study",
   "short_name": "PP Study",
-  "description": "คลังติวสอบ: ข้อสอบ เฉลย บทเรียนจากฎีกา ตัวบท เป้าหมาย และบอร์ดรอบเรียน",
-  "start_url": "./#home",
+  "description": "ทางเข้า PP Study: แอปติวสอบที่มี AI ตรวจคำตอบ",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f6f4ef",

@@ -2,33 +2,69 @@
 <html lang="th">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PP Study</title>
-<meta name="description" content="คลังติวสอบ: ข้อสอบ เฉลย บทเรียนจากฎีกา ตัวบท เป้าหมาย และบอร์ดรอบเรียน">
+<meta name="description" content="ทางเข้า PP Study: แอปติวสอบที่มี AI ตรวจคำตอบ">
 <meta name="theme-color" content="#7a1f2b">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-192.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="stylesheet" href="style.css">
+<style>
+:root{color-scheme:light dark;--bg:light-dark(#f3f1ec,#0f1116);--paper:light-dark(#fff,#181b22);--ink:light-dark(#1b2230,#ebe8e2);--muted:light-dark(#5b6475,#a3a9b5);--line:light-dark(#e1dcd2,#2b303b);--brand:light-dark(#7a1f2b,#ea93a0);--on:light-dark(#fff,#1d1215)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--ink);font:17px/1.65 "Sarabun","Noto Sans Thai","Leelawadee UI",Tahoma,system-ui,sans-serif;padding:20px}
+main{width:min(460px,100%);animation:rise .5s cubic-bezier(.2,.8,.2,1) both}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;margin-bottom:14px}
+h1{font-size:26px;margin:0 0 4px;display:flex;gap:10px;align-items:center}
+h1 svg{width:32px;height:32px;color:var(--brand)}
+p{margin:6px 0}.muted{color:var(--muted);font-size:15px}
+.btn{display:flex;justify-content:center;align-items:center;min-height:52px;border-radius:14px;background:var(--brand);color:var(--on);font-weight:700;font-size:18px;text-decoration:none;margin-top:14px;border:0;width:100%;cursor:pointer;font-family:inherit;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.btn.sec{background:transparent;color:var(--brand);border:1px solid var(--line);font-size:16px;min-height:44px}
+ul{margin:8px 0 0;padding-left:1.2em}li{margin:3px 0}
+[hidden]{display:none}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
 </head>
 <body>
-<header class="top">
-  <h1>⚖️ PP Study</h1>
-  <span class="sub" id="topinfo"></span>
-  <a class="ai-pill" id="aiPill" href="https://claude.ai/artifact/EfTiE8jyisgwrVkmB89Lj7" target="_blank" rel="noopener">✨ ตรวจด้วย AI</a>
-</header>
-<main id="app"><div class="empty">กำลังโหลด…</div></main>
-<nav class="tabs" id="tabs">
-  <span class="ind" aria-hidden="true"></span>
-  <a href="#home" data-t="home"><span class="i">🏠</span>หน้าแรก</a>
-  <a href="#exam" data-t="exam"><span class="i">📝</span>ข้อสอบ</a>
-  <a href="#lessons" data-t="lessons"><span class="i">📚</span>ฎีกา</a>
-  <a href="#laws" data-t="laws"><span class="i">📖</span>ตัวบท</a>
-  <a href="#goals" data-t="goals"><span class="i">🎯</span>เป้าหมาย</a>
-  <a href="#board" data-t="board"><span class="i">🗂️</span>บอร์ด</a>
-  <a class="nav-ai" href="https://claude.ai/artifact/EfTiE8jyisgwrVkmB89Lj7" target="_blank" rel="noopener"><span class="i">✨</span>ตรวจด้วย AI</a>
-</nav>
-<script src="app.js"></script>
+<main>
+  <div class="card">
+    <h1><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M4 7h16M6 7l-3 7a3 3 0 0 0 6 0zM18 7l-3 7a3 3 0 0 0 6 0z"/></svg>PP Study</h1>
+    <p class="muted">ย้ายไปเป็นแอปใน Claude แล้ว เพื่อให้ AI ตรวจคำตอบได้ในตัว</p>
+    <ul class="muted">
+      <li>ข้อสอบตามหมวด พิมพ์ พูด หรือถ่ายรูปลายมือส่งตรวจ</li>
+      <li>AI เทียบคำตอบกับธงทีละประเด็น ให้คะแนนตามเกณฑ์ ก.ต.</li>
+      <li>คลังตัวบทและฎีกา ค้นแล้วบอกชัดว่ามีหรือไม่มี</li>
+    </ul>
+    <a class="btn" href="https://claude.ai/artifact/EfTiE8jyisgwrVkmB89Lj7">เปิด PP Study</a>
+    <p class="muted" style="margin-top:10px">เปิดได้เฉพาะบัญชี Claude ของเจ้าของแอป</p>
+  </div>
+  <div class="card" id="old" hidden>
+    <b>มีข้อมูลจากเว็บเดิมในเครื่องนี้</b>
+    <p class="muted" id="oldInfo"></p>
+    <button class="btn sec" id="exp" type="button">ส่งออกข้อมูลเดิม (.json)</button>
+    <p class="muted">แล้วนำเข้าในแอปใหม่ที่แท็บ แผน → ข้อมูลและการย้ายข้อมูล</p>
+  </div>
+</main>
+<script>
+try {
+  const raw = localStorage.getItem('ppstudy.v1');
+  if (raw) {
+    const d = JSON.parse(raw);
+    const n = (d.attempts || []).length + (d.logs || []).length + Object.keys(d.lessonState || {}).length + (d.rounds || []).length;
+    if (n || (d.goal && d.goal.examDate)) {
+      document.getElementById('old').hidden = false;
+      document.getElementById('oldInfo').textContent = 'เป้าหมาย บันทึกเวลาเรียน บอร์ด และสถานะทบทวนฎีกา';
+      document.getElementById('exp').onclick = () => {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob([raw], { type: 'application/json' }));
+        a.download = 'pp-study-backup.json'; document.body.appendChild(a); a.click(); a.remove();
+      };
+    }
+  }
+} catch (e) {}
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+</script>
 </body>
 </html>
